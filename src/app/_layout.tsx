@@ -8,7 +8,8 @@ export default function Layout() {
             <Drawer
                 screenOptions={{
                     drawerActiveTintColor: "#000",
-                    drawerInactiveTintColor: "#999"
+                    drawerInactiveTintColor: "#999",
+                    headerShown: false,
                 }}
             >
                 <Drawer.Screen
