@@ -1,4 +1,4 @@
-import { Link, router } from "expo-router"
+import { router } from "expo-router"
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
 
 export default function Index() {
@@ -12,7 +12,6 @@ export default function Index() {
                 onPress={signUp}>
                 <Text style={styles.label}>Criar Conta</Text>
             </TouchableOpacity>
-            <Link href={{ pathname: "/home", params: {} }}>Ir pra Home</Link>
         </View>
     )
 }
