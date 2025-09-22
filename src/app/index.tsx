@@ -1,4 +1,3 @@
-import { DrawerToggleButton } from "@react-navigation/drawer"
 import { router } from "expo-router"
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
 export default function Index() {
@@ -7,9 +6,6 @@ export default function Index() {
     }
     return (
         <View style={styles.container}>
-            <View style={styles.header}>
-                <DrawerToggleButton/>
-            </View>
             <TouchableOpacity
                 style={styles.button}
                 onPress={signUp}>
@@ -22,6 +18,7 @@ export default function Index() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        justifyContent: "center",
         alignItems: "center",
         padding: 32,
         gap: 32,
@@ -37,9 +34,5 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: "#000"
     },
-    header: {
-        flexDirection: "row",
-        justifyContent: "flex-end",
-        width: "100%",
-    }
+
 })
