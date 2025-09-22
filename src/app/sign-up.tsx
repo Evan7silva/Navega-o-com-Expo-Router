@@ -1,8 +1,11 @@
 import { router } from "expo-router"
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native"
 
 export default function SignUp() {
     function back() {
+        if (!router.canGoBack()) {
+            return Alert.alert("Não foi possível voltar")
+        }
         router.back()
     }
 

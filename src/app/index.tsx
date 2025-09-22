@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
 
 export default function Index() {
     function signUp() {
-        router.navigate("/sign-up")
+        router.replace("/sign-up")
     }
     return (
         <View style={styles.container}>
