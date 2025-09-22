@@ -1,19 +1,21 @@
-import { router, useLocalSearchParams } from "expo-router"
+import { Redirect, router, useLocalSearchParams } from "expo-router"
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
 
-export default function Product() {
+export default function Home() {
+
     const { id } = useLocalSearchParams()
 
+    if (!id) {
+        return <Redirect href="/"/>
+    }
     function back() {
         router.back()
     }
     return (
         <View style={styles.container}>
-            <Text>Id do produto: {id}</Text>
-            <TouchableOpacity
-                style={styles.button}
-                onPress={back}>
-                <Text style={styles.label}>Voltar</Text>
+            <Text style={styles.label}>Home - {id}</Text>
+            <TouchableOpacity onPress={back}>
+                <Text style={styles.back}>Voltar</Text>
             </TouchableOpacity>
         </View>
     )
@@ -27,14 +29,11 @@ const styles = StyleSheet.create({
         gap: 32,
     },
     label: {
-        fontSize: 16,
+        fontSize: 22,
         fontWeight: "bold",
-        color: "#FFF"
+
     },
-    button: {
-        paddingHorizontal: 32,
-        paddingVertical: 10,
-        borderRadius: 10,
-        backgroundColor: "#000"
-    },
+    back: {
+        fontSize: 32
+    }
 })

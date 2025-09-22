@@ -12,7 +12,7 @@ export default function Index() {
                 onPress={signUp}>
                 <Text style={styles.label}>Criar Conta</Text>
             </TouchableOpacity>
-            <Link href={{pathname: "/product/[id]", params: { id: "7"}}}>Abrir prduto</Link>
+            <Link href={{ pathname: "/home", params: {} }}>Ir pra Home</Link>
         </View>
     )
 }

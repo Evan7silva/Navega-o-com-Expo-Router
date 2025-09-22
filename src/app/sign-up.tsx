@@ -1,15 +1,13 @@
-import { router, useLocalSearchParams } from "expo-router"
+import { router } from "expo-router"
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
 
 export default function SignUp() {
-    const { id, name } = useLocalSearchParams()
     function back() {
         router.back()
     }
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>{id} {name}</Text>
             <TouchableOpacity onPress={back}>
                 <Text style={styles.back}>Voltar</Text>
             </TouchableOpacity>
