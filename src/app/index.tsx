@@ -1,9 +1,12 @@
-import { StyleSheet, Text, View } from "react-native"
+import { Link } from "expo-router"
+import { StyleSheet, View } from "react-native"
 
 export default function Index() {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Entrar</Text>
+            <Link href="/sign-up" style={styles.new}>
+                Criar conta
+            </Link>
         </View>
     )
 }
@@ -14,8 +17,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     },
-    title: {
-        fontSize: 22,
+    new: {
+        fontSize: 16,
         fontWeight: "bold",
     }
 })
