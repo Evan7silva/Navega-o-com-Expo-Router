@@ -8,8 +8,10 @@ export default function SignUp() {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity onPress={back}>
-                <Text style={styles.back}>Voltar</Text>
+            <TouchableOpacity
+                style={styles.button}
+                onPress={back}>
+                <Text style={styles.title}>Voltar</Text>
             </TouchableOpacity>
         </View>
 
@@ -22,11 +24,14 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     },
-    back: {
-        fontSize: 16,
-        fontWeight: "bold",
-    },
     title: {
         fontSize: 22,
-    }
+        color: "#FFF"
+    },
+     button: {
+        paddingHorizontal: 32,
+        paddingVertical: 10,
+        borderRadius: 10,
+        backgroundColor: "#000"
+    },
 })
