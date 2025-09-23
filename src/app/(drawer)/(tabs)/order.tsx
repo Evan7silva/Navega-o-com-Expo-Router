@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from "react-native"
 
-export default function Configs() {
+export default function Order() {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Configurações</Text>
+            <Text style={styles.title}>itens do Pedido</Text>
         </View>
     )
 }
